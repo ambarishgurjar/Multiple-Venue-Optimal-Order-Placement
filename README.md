@@ -1,4 +1,4 @@
-# Multiple-Venue-Optimal-Order-Placement
+# Multiple-Venue-Optimal-Order-Placement Backtest
 Smart Order Router Backtest
 
 
@@ -22,7 +22,7 @@ Smart Order Router Backtest
     6. **Results & JSON**  
        - Prints best parameters, total cost & avg fill price for SOR and baselines as well as basis points saved against each of these strats
       
-    # Smart Order Router Backtest
+
 
 ## Files
 
