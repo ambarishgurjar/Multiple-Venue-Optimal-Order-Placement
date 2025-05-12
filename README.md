@@ -1,7 +1,6 @@
 # Multiple-Venue-Optimal-Order-Placement Backtest
 Smart Order Router Backtest
 
-
 ## Files
 
 - **backtest.py**  
@@ -13,29 +12,7 @@ Smart Order Router Backtest
        - **Best-Ask**: always hit the lowest ask, share-by-share  
        - **TWAP**: 60 s buckets, allocate evenly, fill via Best-Ask within each bucket  
        - **VWAP**: proportional to displayed depth, share-by-share  
-    4. **SOR Implementation**  
-       - Cont & Kukanov static allocator per snapshot  
-       - Cost = cash + queue‐risk + over/underfill penalties  
-    5. **Parameter Tuning**  
-       - **Nesterov’s accelerated gradient** (faster than grid)  
-
-    6. **Results & JSON**  
-       - Prints best parameters, total cost & avg fill price for SOR and baselines as well as basis points saved against each of these strats
-      
-
-
-## Files
-
-- **backtest.py**  
-  - **Dependencies**: only `numpy`, `pandas`, and Python standard library  
-  - **Workflow**:  
-    1. **Load & Clean** `l1_day.csv` → drop duplicates, sort by timestamp  
-    2. **Snapshot Generation** → group by `ts_event`, build list of `Venue(ask, size, fee, rebate)`  
-    3. **Baselines**  
-       - **Best-Ask**: always hit the lowest ask, share-by-share  
-       - **TWAP**: 60 s buckets, allocate evenly, fill via Best-Ask within each bucket  
-       - **VWAP**: proportional to displayed depth, share-by-share  
-    4. **SOR Implementation**  
+    4. **Smart Order Routing Implementation**  
        - Cont & Kukanov static allocator per snapshot  
        - Cost = cash + queue‐risk + over/underfill penalties  
     5. **Parameter Tuning**  
